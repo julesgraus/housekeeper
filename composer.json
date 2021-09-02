@@ -1,0 +1,45 @@
+{
+    "name": "julesgraus/housekeeper",
+    "description": "Tools for cleaning old stuff up",
+    "keywords": [
+        "JulesGraus",
+        "laravel",
+        "houskeeper"
+    ],
+    "authors": [
+        {
+            "name": "Jules",
+            "email": "jules.graus@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.15",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "JulesGraus\\Housekeeper\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JulesGraus\\Housekeeper\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JulesGraus\\Housekeeper\\Providers\\HousekeeperProvider"
+            ]
+        }
+    }
+}
